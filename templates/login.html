@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    body {
+    font-family: 'Arial', sans-serif;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.25);
+}
+
+button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+</style>
+    <title>Login</title>
+</head>
+<body style=" background-color:lightblue;">
+{%include 'nav.html'%}
+<div class="login-container" style="'background-color=color">
+    <h2>Login Page</h2>
+    <form action="/submit" method="post">
+
+        <div class="input-group">
+            <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <br>
+        </div>
+
+        <div class="input-group">
+            <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        </div>
+        <button type="submit" value="login">Login </button>
+    </form>
+    <p>{{message}}</p>
+</div>
+<div>
+ {%include 'foot.html'%}
+</div>
+</body>
+</html>
